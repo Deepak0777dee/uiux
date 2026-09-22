@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses - Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashSidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo"><img src="images/logo-stackly.webp" alt="Logo" /></a>
+        <button class="sidebar-close" id="sidebarClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar" id="sbAvatar">U</div>
+        <div>
+          <div class="sidebar-user-name" id="sbName">User</div>
+          <div class="sidebar-user-role" id="sbRole">Admin</div>
+          <div class="sidebar-user-email" id="sbEmail">user@stackly.com</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-label">Main</div>
+        <a href="dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Dashboard</a>
+        <a href="analytics.html" class="sidebar-link" data-role="admin-only"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Analytics</a>
+        <a href="students.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Students</a>
+        <div class="nav-label" style="margin-top:0.75rem;" data-role="admin-only">Administration</div>
+        <a href="admin-courses.html" class="sidebar-link active" data-role="admin-only"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Courses</a>
+        <a href="enrollments.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Enrollments</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button onclick="window.location.href='login.html'" class="sidebar-link" style="width:100%;color:var(--danger);justify-content:center;border:1px solid rgba(239,68,68,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Logout</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <button class="mobile-menu-btn" id="mobileMenuBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+          <h1 class="dashboard-title">Courses</h1>
+        </div>
+        <div class="topbar-right">
+          <button onclick="window.location.href='404.html'" class="btn-primary" data-role="admin-only" style="font-size:0.82rem;padding:0.5rem 1rem;border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;gap:0.4rem;background:var(--warm);color:#fff;border:none;font-weight:600;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Add Course</button>
+          <div class="topbar-avatar" id="topbarAvatar" onclick="window.location.href='404.html'" style="cursor:pointer;">U</div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+
+        <!-- Summary -->
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--warm-bg);color:var(--warm);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+            <div class="dash-stat-info"><h4>Total Courses</h4><div class="val">48</div></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--success-bg);color:var(--success);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="dash-stat-info"><h4>Published</h4><div class="val">43</div></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--warning-bg);color:var(--warning);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div class="dash-stat-info"><h4>Drafts</h4><div class="val">5</div></div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--info-bg);color:var(--info);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+            <div class="dash-stat-info"><h4>Categories</h4><div class="val">12</div></div>
+          </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter-bar">
+          <div class="search-input">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Search courses..." onclick="window.location.href='404.html'" />
+          </div>
+          <select class="filter-select" onchange="window.location.href='404.html'">
+            <option>All Categories</option>
+            <option>Programming</option>
+            <option>Design</option>
+            <option>Marketing</option>
+          </select>
+          <select class="filter-select" onchange="window.location.href='404.html'">
+            <option>All Status</option>
+            <option>Published</option>
+            <option>Draft</option>
+          </select>
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div class="ds-grid">
+          <div class="ds-card">
+            <div class="ds-card-header">
+              <span class="status-badge status-active">Published</span>
+              <button onclick="window.location.href='404.html'" style="border:none;background:none;color:var(--text-faint);cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+            </div>
+            <h4>Advanced Web Development</h4>
+            <p>Master modern web technologies including React, Node.js, and cloud deployment.</p>
+            <div class="ds-card-stats">
+              <div class="ds-card-stat"><div class="val">312</div><div class="lbl">Enrolled</div></div>
+              <div class="ds-card-stat"><div class="val">$149</div><div class="lbl">Price</div></div>
+              <div class="ds-card-stat"><div class="val">4.8★</div><div class="lbl">Rating</div></div>
+            </div>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card-header">
+              <span class="status-badge status-active">Published</span>
+              <button onclick="window.location.href='404.html'" style="border:none;background:none;color:var(--text-faint);cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+            </div>
+            <h4>UI/UX Design Masterclass</h4>
+            <p>Learn design thinking, Figma, prototyping, and user research methodologies.</p>
+            <div class="ds-card-stats">
+              <div class="ds-card-stat"><div class="val">284</div><div class="lbl">Enrolled</div></div>
+              <div class="ds-card-stat"><div class="val">$99</div><div class="lbl">Price</div></div>
+              <div class="ds-card-stat"><div class="val">4.9★</div><div class="lbl">Rating</div></div>
+            </div>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card-header">
+              <span class="status-badge status-active">Published</span>
+              <button onclick="window.location.href='404.html'" style="border:none;background:none;color:var(--text-faint);cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+            </div>
+            <h4>Data Science Fundamentals</h4>
+            <p>Python, Pandas, machine learning basics, and data visualization techniques.</p>
+            <div class="ds-card-stats">
+              <div class="ds-card-stat"><div class="val">256</div><div class="lbl">Enrolled</div></div>
+              <div class="ds-card-stat"><div class="val">$129</div><div class="lbl">Price</div></div>
+              <div class="ds-card-stat"><div class="val">4.7★</div><div class="lbl">Rating</div></div>
+            </div>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card-header">
+              <span class="status-badge status-pending">Draft</span>
+              <button onclick="window.location.href='404.html'" style="border:none;background:none;color:var(--text-faint);cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+            </div>
+            <h4>Digital Marketing Pro</h4>
+            <p>SEO, social media marketing, Google Ads, and content strategy.</p>
+            <div class="ds-card-stats">
+              <div class="ds-card-stat"><div class="val">198</div><div class="lbl">Enrolled</div></div>
+              <div class="ds-card-stat"><div class="val">$79</div><div class="lbl">Price</div></div>
+              <div class="ds-card-stat"><div class="val">4.6★</div><div class="lbl">Rating</div></div>
+            </div>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card-header">
+              <span class="status-badge status-new">New</span>
+              <button onclick="window.location.href='404.html'" style="border:none;background:none;color:var(--text-faint);cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+            </div>
+            <h4>React Development</h4>
+            <p>Build modern React applications with hooks, state management, and Next.js.</p>
+            <div class="ds-card-stats">
+              <div class="ds-card-stat"><div class="val">176</div><div class="lbl">Enrolled</div></div>
+              <div class="ds-card-stat"><div class="val">$119</div><div class="lbl">Price</div></div>
+              <div class="ds-card-stat"><div class="val">4.5★</div><div class="lbl">Rating</div></div>
+            </div>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card-header">
+              <span class="status-badge status-active">Published</span>
+              <button onclick="window.location.href='404.html'" style="border:none;background:none;color:var(--text-faint);cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+            </div>
+            <h4>Business Analytics</h4>
+            <p>Excel, SQL, Tableau, and business intelligence for decision-making.</p>
+            <div class="ds-card-stats">
+              <div class="ds-card-stat"><div class="val">145</div><div class="lbl">Enrolled</div></div>
+              <div class="ds-card-stat"><div class="val">$89</div><div class="lbl">Price</div></div>
+              <div class="ds-card-stat"><div class="val">4.4★</div><div class="lbl">Rating</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    if (authProtectRoute('admin')) { }
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('dashSidebar');
+    const closeBtn = document.getElementById('sidebarClose');
+    if (menuBtn) menuBtn.addEventListener('click', () => sidebar.classList.add('open'));
+    if (closeBtn) closeBtn.addEventListener('click', () => sidebar.classList.remove('open'));
+  </script>
+</body>
+</html>

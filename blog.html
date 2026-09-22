@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Stackly Online Education</title>
+  <meta name="description" content="Read the latest insights, tips, and updates from Stackly on education, tech skills, and career growth." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <div class="topbar-item yellow">
+          <i class="fa-solid fa-phone fa-sm"></i>
+          <span style="color:var(--topbar-text)">(705) 569-0123</span>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item yellow">
+          <i class="fa-regular fa-envelope fa-sm"></i>
+          <span style="color:var(--topbar-text)">info@intogmail.com</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item" id="topbar-auth">
+          <a href="login.html">Login</a> / <a href="signup.html">Register</a>
+        </div>
+        <div class="topbar-divider"></div>
+        <span>Follow On:</span>
+        <div class="topbar-social">
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN HEADER ===== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-stackly.webp" alt="Stackly Logo" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="about.html">About Us <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="courses-public.html">Courses <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="blog.html" class="nav-active">Blog <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="contact.html">Contact <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="categories-btn" onclick="window.location.href=\'404.html\'">
+          <i class="fa-solid fa-border-all"></i> Categories <i class="fa-solid fa-angle-down fa-xs"></i>
+        </button>
+        <div class="header-search">
+          <input type="text" placeholder="Search Course.." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="cart-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-badge">02</span>
+        </div>
+        <a href="signup.html" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses-public.html">Courses</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="signup.html" class="btn-primary" style="text-align:center; justify-content:center;">Apply Now</a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-hero-banner">
+    <!-- Decorative dots top-left -->
+    <div class="page-hero-dots-tl"></div>
+    <!-- Decorative stripes top-right -->
+    <div class="page-hero-stripes-tr"></div>
+
+    <div class="container page-hero-inner">
+      <h1 class="page-hero-title">Blog Standard</h1>
+      <div class="page-hero-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-arrow-right fa-xs"></i>
+        <span>Blog Standard</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG MAIN CONTENT ===== -->
+  <section class="blog-content-section">
+    <div class="container blog-layout">
+      <!-- LEFT MAIN CONTENT -->
+      <div class="blog-main">
+        
+        <!-- Post 1 -->
+        <article class="blog-post-card">
+          <img src="images/blog1.webp" alt="Blog Post Image" class="blog-post-img" />
+          <div class="blog-post-meta">
+            <span><i class="fa-regular fa-calendar"></i> December 24, 2025</span>
+            <span><i class="fa-regular fa-comments"></i> Comments</span>
+            <span><i class="fa-regular fa-user"></i> Jennifer Hale</span>
+          </div>
+          <h2 class="blog-post-title">How to Build Engaging Digital Experiences Step-by-Step</h2>
+          <p class="blog-post-desc">
+            What does it take to deliver an amazing user experience (UX)? A seamless design process, of course. The UX design process is a cycle that leads to the creation of products that align with users' needs to create a more satisfying, intuitive experience. It entails:
+          </p>
+          <a href="404.html" class="btn-see-articles">See Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-post-card">
+          <img src="images/blog2.webp" alt="Blog Post Image" class="blog-post-img" />
+          <div class="blog-post-meta">
+            <span><i class="fa-regular fa-calendar"></i> December 24, 2025</span>
+            <span><i class="fa-regular fa-comments"></i> Comments</span>
+            <span><i class="fa-regular fa-user"></i> Jennifer Hale</span>
+          </div>
+          <h2 class="blog-post-title">Mastering UX: A Complete Guide to Better User Design</h2>
+          <p class="blog-post-desc">
+            What does it take to deliver an amazing user experience (UX)? A seamless design process, of course. The UX design process is a cycle that leads to the creation of products that align with users' needs to create a more satisfying, intuitive experience. It entails:
+          </p>
+          <a href="404.html" class="btn-see-articles">See Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-post-card">
+          <img src="images/blog3.webp" alt="Blog Post Image" class="blog-post-img" />
+          <div class="blog-post-meta">
+            <span><i class="fa-regular fa-calendar"></i> December 24, 2025</span>
+            <span><i class="fa-regular fa-comments"></i> Comments</span>
+            <span><i class="fa-regular fa-user"></i> Jennifer Hale</span>
+          </div>
+          <h2 class="blog-post-title">Design Thinking: Creating Seamless User Interactions</h2>
+          <p class="blog-post-desc">
+            What does it take to deliver an amazing user experience (UX)? A seamless design process, of course. The UX design process is a cycle that leads to the creation of products that align with users' needs to create a more satisfying, intuitive experience. It entails:
+          </p>
+          <a href="404.html" class="btn-see-articles">See Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <!-- Pagination -->
+        <div class="blog-pagination">
+          <a href="404.html" class="page-num"><i class="fa-solid fa-arrow-left"></i></a>
+          <a href="404.html" class="page-num">1</a>
+          <a href="404.html" class="page-num active">2</a>
+          <a href="404.html" class="page-num">3</a>
+          <a href="404.html" class="page-num"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="blog-sidebar">
+        
+        <!-- Search -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">Search Here</h3>
+          <div class="search-form">
+            <input type="text" placeholder="Search Keywords" />
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">Category</h3>
+          <div class="category-list">
+            <a href="404.html" class="category-item"><span>Business</span><span>06</span></a>
+            <a href="404.html" class="category-item active"><span>Education</span><span>07</span></a>
+            <a href="404.html" class="category-item"><span>Family & Divorce</span><span>09</span></a>
+            <a href="404.html" class="category-item"><span>Online Marketing</span><span>06</span></a>
+            <a href="404.html" class="category-item"><span>Islamic</span><span>05</span></a>
+            <a href="404.html" class="category-item"><span>Quran</span><span>08</span></a>
+            <a href="404.html" class="category-item"><span>Resturent</span><span>06</span></a>
+            <a href="404.html" class="category-item"><span>Web Design</span><span>05</span></a>
+          </div>
+        </div>
+
+        <!-- Recent Post -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">Recent Post</h3>
+          <div class="recent-post-list">
+            <a href="404.html" class="recent-post-item" style="text-decoration:none;">
+              <img src="images/recentpost1.webp" alt="Recent Post" class="recent-post-img" />
+              <div class="recent-post-date"><i class="fa-regular fa-calendar"></i> 02 June, 2025</div>
+              <h4 class="recent-post-title">Dapibus cras nisi suscipit nibh elite purus condimentum</h4>
+            </a>
+            <a href="404.html" class="recent-post-item" style="text-decoration:none;">
+              <img src="images/recentpost2.webp" alt="Recent Post" class="recent-post-img" />
+              <div class="recent-post-date"><i class="fa-regular fa-calendar"></i> 02 June, 2025</div>
+              <h4 class="recent-post-title">Dapibus cras nisi suscipit nibh elite purus condimentum</h4>
+            </a>
+            <a href="404.html" class="recent-post-item" style="text-decoration:none;">
+              <img src="images/recentpost3.webp" alt="Recent Post" class="recent-post-img" />
+              <div class="recent-post-date"><i class="fa-regular fa-calendar"></i> 02 June, 2025</div>
+              <h4 class="recent-post-title">Dapibus cras nisi suscipit nibh elite purus condimentum</h4>
+            </a>
+          </div>
+        </div>
+
+        <!-- Make an Appointment -->
+        <div class="sidebar-widget appointment-widget">
+          <div class="appointment-img-wrap">
+            <img src="images/appointnmentperson.webp" alt="Appointment" />
+            <div class="quality-badge">100%<br/>QUALITY</div>
+          </div>
+          <div class="appointment-content">
+            <h3>Make An Appointment</h3>
+            <div class="phone">+51-(0)-888-455-369</div>
+            <a href="contact.html" class="btn-contact-us">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Popular Tags -->
+        <div class="sidebar-widget">
+          <h3 class="sidebar-title">Popular Tags</h3>
+          <div class="tags-list">
+            <a href="404.html" class="tag-item">Business</a>
+            <a href="404.html" class="tag-item">Education</a>
+            <a href="404.html" class="tag-item">Students</a>
+            <a href="404.html" class="tag-item">Art</a>
+            <a href="404.html" class="tag-item">Modern</a>
+            <a href="404.html" class="tag-item">School</a>
+            <a href="404.html" class="tag-item">Tech</a>
+            <a href="404.html" class="tag-item">Development</a>
+            <a href="404.html" class="tag-item">UI UX Design</a>
+            <a href="404.html" class="tag-item">Market</a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER BANNER ===== -->
+  <div class="container">
+    <div class="newsletter-banner">
+      <div class="newsletter-text">
+        <h2>Sign Up today to get the<br/>latest inspiration &amp; insights</h2>
+      </div>
+      <form class="newsletter-form">
+        <div class="newsletter-form-inner">
+          <input type="email" placeholder="Enter Your Email Address" required />
+          <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== GLOBAL FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></div>
+        <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+        <a href="contact.html" class="footer-contact-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses-public.html">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="signup.html">Become Teacher</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Instructor</a></li>
+          <li><a href="about.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Get Contact</h4>
+        <p class="footer-contact-item"><strong>Phone:</strong> (+91) 123-456-789</p>
+        <p class="footer-contact-item"><strong>Email:</strong> stackly@gmail.com</p>
+        <p class="footer-contact-item"><strong>Location:</strong> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+        <div class="footer-social-icons">
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-left">Copyright &copy; 2026 Stackly &nbsp; All Rights Reserved</div>
+      <div class="footer-bottom-right">
+        <a href="404.html">Terms of service</a><span>&#183;</span>
+        <a href="404.html">Privacy policy</a><span>&#183;</span>
+        <a href="404.html">Subscription</a><span>&#183;</span>
+        <a href="login.html">Login &amp; Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // Mobile toggle
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Auth update
+    if (typeof authIsLoggedIn === 'function' && authIsLoggedIn()) {
+      const authEl = document.getElementById('topbar-auth');
+      if (authEl) authEl.innerHTML = `<a href="dashboard.html" style="color:var(--yellow);">Dashboard</a> | <a href="login.html" onclick="authLogout()">Logout</a>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Online Education</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashSidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo"><img src="images/logo-stackly.webp" alt="Logo" /></a>
+        <button class="sidebar-close" id="sidebarClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar" id="sbAvatar">U</div>
+        <div>
+          <div class="sidebar-user-name" id="sbName">User</div>
+          <div class="sidebar-user-role" id="sbRole">Admin</div>
+          <div class="sidebar-user-email" id="sbEmail">user@stackly.com</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-label">Main</div>
+        <a href="dashboard.html" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Dashboard</a>
+        <a href="analytics.html" class="sidebar-link" data-role="admin-only"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Analytics</a>
+        <a href="students.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg> Students</a>
+        <div class="nav-label" style="margin-top:0.75rem;" data-role="admin-only">Administration</div>
+        <a href="admin-courses.html" class="sidebar-link" data-role="admin-only"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Courses</a>
+        <a href="enrollments.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Enrollments</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button onclick="window.location.href='login.html'" class="sidebar-link" style="width:100%;color:var(--danger);justify-content:center;border:1px solid rgba(239,68,68,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg> Logout</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <button class="mobile-menu-btn" id="mobileMenuBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+          <h1 class="dashboard-title">Dashboard</h1>
+        </div>
+        <div class="topbar-right"><div class="topbar-avatar" id="topbarAvatar" onclick="window.location.href='404.html'" style="cursor:pointer;">U</div></div>
+      </header>
+
+      <div class="dashboard-content">
+
+        <!-- Stat Cards -->
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--warm-bg);color:var(--warm);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <h4>Total Students</h4>
+              <div class="val">1,245</div>
+              <div class="dash-stat-trend trend-up"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg> +12.5%</div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--success-bg);color:var(--success);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <h4>Monthly Revenue</h4>
+              <div class="val">$14,500</div>
+              <div class="dash-stat-trend trend-up"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg> +8.3%</div>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background:var(--info-bg);color:var(--info);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <h4>Course Completion</h4>
+              <div class="val">87.4%</div>
+              <div class="dash-stat-trend trend-up"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg> +3.1%</div>
+            </div>
+          </div>
+          <div class="dash-stat-card" data-role="admin-only">
+            <div class="dash-stat-icon" style="background:rgba(139,92,246,0.08);color:#8b5cf6;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <h4>Active Courses</h4>
+              <div class="val">48</div>
+              <div class="dash-stat-trend trend-up"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg> +4 new</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row 1 -->
+        <div class="dash-row">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Enrollment Trends</h3>
+              <button onclick="window.location.href='404.html'" style="font-size:0.78rem;color:var(--text-faint);background:none;border:1px solid var(--border);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);cursor:pointer;">View All</button>
+            </div>
+            <div class="chart-container"><canvas id="trendChart"></canvas></div>
+          </div>
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Students by Category</h3>
+            </div>
+            <div class="chart-container"><canvas id="instrumentChart"></canvas></div>
+          </div>
+        </div>
+
+        <!-- Charts Row 2 -->
+        <div class="dash-row">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Revenue Overview</h3>
+              <button onclick="window.location.href='404.html'" style="font-size:0.78rem;color:var(--text-faint);background:none;border:1px solid var(--border);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);cursor:pointer;">Export</button>
+            </div>
+            <div class="chart-container"><canvas id="revenueChart"></canvas></div>
+          </div>
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Weekly Attendance</h3>
+            </div>
+            <div class="chart-container"><canvas id="attendanceChart"></canvas></div>
+          </div>
+        </div>
+
+        <!-- Recent Activity + Enrollments Table -->
+        <div class="dash-row">
+          <!-- Activity Feed -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Recent Activity</h3>
+            </div>
+            <div class="activity-log">
+              <div class="activity-item">
+                <div class="activity-dot" style="background:var(--success);"></div>
+                <div>
+                  <p><strong>Alice Smith</strong> enrolled in <strong>Advanced Web Development</strong></p>
+                  <div class="time">2 hours ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot" style="background:var(--info);"></div>
+                <div>
+                  <p><strong>Bob Jones</strong> completed <strong>UI/UX Design Masterclass</strong> — Certificate issued</p>
+                  <div class="time">5 hours ago</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot" style="background:var(--warning);"></div>
+                <div>
+                  <p><strong>Charlie Brown</strong> payment pending for <strong>Data Science Fundamentals</strong></p>
+                  <div class="time">Yesterday</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot" style="background:var(--accent);"></div>
+                <div>
+                  <p>New course <strong>"Digital Marketing Pro"</strong> published by admin</p>
+                  <div class="time">Yesterday</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot" style="background:var(--purple, #8b5cf6);"></div>
+                <div>
+                  <p><strong>Diana Ross</strong> submitted assignment for <strong>React Development</strong></p>
+                  <div class="time">2 days ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Enrollments Table -->
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">Latest Enrollments</h3>
+              <button onclick="window.location.href='enrollments.html'" style="font-size:0.78rem;color:var(--text-faint);background:none;border:1px solid var(--border);padding:0.35rem 0.75rem;border-radius:var(--radius-sm);cursor:pointer;">See All</button>
+            </div>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Alice Smith</td>
+                    <td>Advanced Web Development</td>
+                    <td>Sep 20, 2026</td>
+                    <td><span class="status-badge status-active">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Bob Jones</td>
+                    <td>UI/UX Design Masterclass</td>
+                    <td>Sep 19, 2026</td>
+                    <td><span class="status-badge status-completed">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Charlie Brown</td>
+                    <td>Data Science Fundamentals</td>
+                    <td>Sep 18, 2026</td>
+                    <td><span class="status-badge status-pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>Diana Ross</td>
+                    <td>Digital Marketing Pro</td>
+                    <td>Sep 17, 2026</td>
+                    <td><span class="status-badge status-active">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Evan Lee</td>
+                    <td>React Development</td>
+                    <td>Sep 16, 2026</td>
+                    <td><span class="status-badge status-new">New</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="toast-container" aria-live="polite"></div>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    if (authProtectRoute('student')) {
+      // RBAC applied by auth.js
+    }
+    // Mobile sidebar toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('dashSidebar');
+    const closeBtn = document.getElementById('sidebarClose');
+    if (menuBtn) menuBtn.addEventListener('click', () => sidebar.classList.add('open'));
+    if (closeBtn) closeBtn.addEventListener('click', () => sidebar.classList.remove('open'));
+  </script>
+  <script src="js/charts.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", () => { setTimeout(() => { initDashboardCharts(); }, 100); });</script>
+</body>
+</html>

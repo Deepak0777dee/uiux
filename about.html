@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Stackly Online Education</title>
+  <meta name="description" content="Learn about Stackly — our mission, our expert instructors, and why we are the trusted market leader in education." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <div class="topbar-item yellow">
+          <i class="fa-solid fa-phone fa-sm"></i>
+          <span style="color:var(--topbar-text)">(705) 569-0123</span>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item yellow">
+          <i class="fa-regular fa-envelope fa-sm"></i>
+          <span style="color:var(--topbar-text)">info@intogmail.com</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item" id="topbar-auth">
+          <a href="login.html">Login</a> / <a href="signup.html">Register</a>
+        </div>
+        <div class="topbar-divider"></div>
+        <span>Follow On:</span>
+        <div class="topbar-social">
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN HEADER ===== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-stackly.webp" alt="Stackly Logo" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="about.html" class="nav-active">About Us <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="courses-public.html">Courses <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="contact.html">Contact <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="categories-btn" onclick="window.location.href=\'404.html\'">
+          <i class="fa-solid fa-border-all"></i> Categories <i class="fa-solid fa-angle-down fa-xs"></i>
+        </button>
+        <div class="header-search">
+          <input type="text" placeholder="Search Course.." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="cart-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-badge">02</span>
+        </div>
+        <a href="signup.html" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses-public.html">Courses</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="signup.html" class="btn-primary" style="text-align:center; justify-content:center;">Apply Now</a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-hero-banner">
+    <!-- Decorative dots top-left -->
+    <div class="page-hero-dots-tl"></div>
+    <!-- Decorative stripes top-right -->
+    <div class="page-hero-stripes-tr"></div>
+
+    <div class="container page-hero-inner">
+      <!-- Left: Title + Breadcrumb -->
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">
+          About us
+          <span class="page-hero-underline"></span>
+        </h1>
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-arrow-right fa-xs"></i>
+          <span>About us</span>
+        </div>
+      </div>
+
+      <!-- Right: Image with rounded corners + decorative diagonal overlay -->
+      <div class="page-hero-image">
+        <div class="page-hero-img-wrap">
+          <img src="images/about-library.webp" alt="Students in Library" />
+          <!-- Diagonal lines decoration -->
+          <div class="page-hero-img-deco"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION (reused from home) ===== -->
+  <section class="about-section" style="padding-top: 5rem; padding-bottom: 4rem;">
+    <div class="container about-inner">
+      <!-- Left: stacked images -->
+      <div class="about-images">
+        <div class="about-img-main">
+          <img src="images/about-students-group.webp" alt="Students Group" />
+        </div>
+        <div class="about-img-overlay">
+          <img src="images/about-library.webp" alt="Library Students" />
+          <div class="play-btn">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="experience-badge">
+            <span class="exp-num">25+</span>
+            <span class="exp-label">Years of<br/>Experience</span>
+          </div>
+        </div>
+        <div class="about-dot-yellow"></div>
+        <div class="about-dot-purple"></div>
+      </div>
+      <!-- Right: Content -->
+      <div class="about-content">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title-lg" style="text-align:left; margin-bottom:0; font-size:1.9rem;">
+          Learn and Grow Your Skills<br/><span class="title-strikethrough">Anywhere</span>, Anytime
+        </h2>
+        <p class="about-desc">Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+        <div class="about-features">
+          <div class="about-features-col">
+            <div class="feature-item"><i class="fa-solid fa-check" style="color:var(--yellow);"></i> Flexible Classes</div>
+            <div class="feature-item"><i class="fa-solid fa-check" style="color:var(--yellow);"></i> Lifetime Access</div>
+          </div>
+          <div class="about-features-col">
+            <div class="feature-item"><i class="fa-solid fa-check" style="color:var(--yellow);"></i> Expert Trainers</div>
+            <div class="feature-item"><i class="fa-solid fa-check" style="color:var(--yellow);"></i> Learn Anywhere</div>
+          </div>
+        </div>
+        <a href="contact.html" class="about-cta">More About US <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR (same as home) ===== -->
+  <section class="stats-bar">
+    <div class="container stats-bar-inner">
+      <div class="stat-item">
+        <i class="fa-solid fa-book-open"></i>
+        <div><strong>1,090+</strong><span>Our Online Courses</span></div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <div><strong>120+</strong><span>Our Instructors</span></div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <i class="fa-solid fa-circle-play"></i>
+        <div><strong>145+</strong><span>Total Video Lessons</span></div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <i class="fa-solid fa-user-group"></i>
+        <div><strong>6,000+</strong><span>Total Students Enrolled</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-choose-section">
+    <div class="container">
+      <div class="section-tag-wrap">
+        <span class="section-tag">Why Choose Us</span>
+      </div>
+      <h2 class="section-title-lg">Unlock Your Potential with Our Expert<br/>Led Course <span class="title-strikethrough">Collection</span> Today</h2>
+      <div class="why-grid">
+        <!-- Card 1 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="8" width="28" height="36" rx="3" stroke="#0d4a3a" stroke-width="2" fill="none"/>
+              <rect x="14" y="4" width="28" height="36" rx="3" stroke="#0d4a3a" stroke-width="2" fill="none"/>
+              <text x="22" y="28" font-family="Arial" font-size="11" font-weight="bold" fill="#0d4a3a" text-anchor="middle">ABC</text>
+            </svg>
+          </div>
+          <h3>Grammar Base</h3>
+          <p>World-class training and development programs developed by top teachers Habitant duis voluptate.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="8" stroke="#0d4a3a" stroke-width="2" fill="none"/>
+              <path d="M12 40c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#0d4a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M30 12l4-4M18 12l-4-4" stroke="#0d4a3a" stroke-width="2" stroke-linecap="round"/>
+              <rect x="20" y="30" width="8" height="12" rx="2" stroke="#0d4a3a" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <h3>World's Best Tutor</h3>
+          <p>World-class training and development programs developed by top teachers Habitant duis voluptate.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="6" width="32" height="38" rx="3" stroke="#0d4a3a" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="22" r="6" stroke="#0d4a3a" stroke-width="2" fill="none"/>
+              <path d="M20 22l3 3 5-5" stroke="#0d4a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 36h20M14 10h8" stroke="#0d4a3a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Classified Certificate</h3>
+          <p>World-class training and development programs developed by top teachers Habitant duis voluptate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS (same as home) ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-tag-wrap">
+        <span class="section-tag">Testimonial</span>
+      </div>
+      <h2 class="section-title-lg text-center">What Our Learners <span class="title-strikethrough">Say About</span><br/>Stackly's Impact and Value</h2>
+
+      <div class="testimonial-slider-wrap">
+        <button class="testimonial-arrow testimonial-prev" id="testimonialPrev" aria-label="Previous">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card active">
+            <div class="testimonial-img-wrap">
+              <img src="images/testimonial-christopher.webp" alt="Christopher Story" />
+            </div>
+            <div class="testimonial-content">
+              <div class="testimonial-quote-icon">"</div>
+              <p class="testimonial-text">Stackly transformed my learning journey! The platform is intuitive, the courses are top-notch, and the support is exceptional. I've gained real skills and confidence. Highly recommended for anyone serious about education.</p>
+              <div class="testimonial-author">
+                <div>
+                  <strong>Christopher Story</strong>
+                  <span>Foundr &amp; CEO UIPainter</span>
+                </div>
+                <div class="testimonial-brand">
+                  <i class="fa-solid fa-paint-brush" style="color:#2980b9;"></i> <strong>UIPainter</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-img-wrap">
+              <img src="images/about-students-group.webp" alt="Alex Johnson" style="object-position:top;" />
+            </div>
+            <div class="testimonial-content">
+              <div class="testimonial-quote-icon">"</div>
+              <p class="testimonial-text">The quality of instructors on Stackly is second to none. Every course I've taken has directly impacted my career growth. The flexible scheduling makes it easy to learn around my busy life. Absolutely love this platform!</p>
+              <div class="testimonial-author">
+                <div>
+                  <strong>Alex Johnson</strong>
+                  <span>Senior Product Manager</span>
+                </div>
+                <div class="testimonial-brand">
+                  <i class="fa-solid fa-briefcase" style="color:#0c4d44;"></i> <strong>TechCorp</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="testimonial-arrow testimonial-next" id="testimonialNext" aria-label="Next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="testimonial-glow-teal"></div>
+    <div class="testimonial-glow-yellow"></div>
+  </section>
+
+  <!-- ===== PARTNERS (same as home) ===== -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="section-tag-wrap">
+        <span class="section-tag">Our Partner</span>
+      </div>
+      <h2 class="section-title-lg text-center">The trusted market leader in talent<br/>transformation through <span class="title-strikethrough">education</span></h2>
+      <div class="partners-grid">
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-book-open" style="color:#e74c3c; font-size:2rem;"></i><span>Gardenbook</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-graduation-cap" style="color:#e74c3c; font-size:2rem;"></i><span>EduRead</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-pen-nib" style="color:#2980b9; font-size:2rem;"></i><span>PenBook</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-house-user" style="color:#f39c12; font-size:2rem;"></i><span>EduHouse</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-book" style="color:#f39c12; font-size:2rem;"></i><span>LearnPath</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-comments" style="color:#e74c3c; font-size:2rem;"></i><span>BookChat</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-crow" style="color:#2980b9; font-size:2rem;"></i><span>OwlBook</span></div></div>
+        <div class="partner-item"><div class="partner-placeholder"><i class="fa-solid fa-university" style="color:#e74c3c; font-size:2rem;"></i><span>University</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTRUCTORS (same as home) ===== -->
+  <section class="instructors-section">
+    <div class="container">
+      <div class="instructors-header">
+        <div class="instructors-header-left">
+          <div class="section-tag-wrap" style="text-align:left; margin-bottom:0.75rem;">
+            <span class="section-tag">Instructors</span>
+          </div>
+          <h2 class="section-title-lg" style="text-align:left; margin-bottom:0;">Meet Our Expert and<br/>Passionate <span class="title-strikethrough">Teaching</span> Faculty</h2>
+        </div>
+        <div class="instructors-header-wave">
+          <span class="wave-icon">&#126;&#126;&#126;</span>
+          <a href="404.html" class="btn-all-instructors">All Instructors <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="instructors-grid">
+        <div class="instructor-card">
+          <div class="instructor-info"><h3>Sarah Fontenot</h3><span>Subject Expert</span></div>
+          <div class="instructor-img-wrap">
+            <img src="images/instructor-sarah.webp" alt="Sarah Fontenot" />
+            <div class="instructor-social-bar">
+              <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-info"><h3>Erika Walker</h3><span>Online Course Coach</span></div>
+          <div class="instructor-img-wrap">
+            <img src="images/instructor-erika.webp" alt="Erika Walker" />
+            <div class="instructor-social-bar">
+              <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-info"><h3>Joan Martinez</h3><span>Academic Mentor</span></div>
+          <div class="instructor-img-wrap">
+            <img src="images/instructor-joan.webp" alt="Joan Martinez" />
+            <div class="instructor-social-bar">
+              <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-info"><h3>Helen Walker</h3><span>Language Instructor</span></div>
+          <div class="instructor-img-wrap">
+            <img src="images/instructor-helen.webp" alt="Helen Walker" />
+            <div class="instructor-social-bar">
+              <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="cta-banner">
+      <div class="cta-circle"></div>
+      <div class="cta-dots"></div>
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text">
+          <h2>Ready To Get Started?<br/>Let&rsquo;s <span class="cta-highlight">Talk To Us Today</span></h2>
+          <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you</p>
+          <a href="contact.html" class="btn-start-learning">Start Learning Now</a>
+        </div>
+        <div class="cta-banner-image">
+          <img src="images/appointnmentperson.webp" alt="Start Learning" />
+        </div>
+      </div>
+    </section>
+
+  <!-- ===== GLOBAL FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></div>
+        <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+        <a href="contact.html" class="footer-contact-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses-public.html">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="signup.html">Become Teacher</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Instructor</a></li>
+          <li><a href="about.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Get Contact</h4>
+        <p class="footer-contact-item"><strong>Phone:</strong> (+91) 123-456-789</p>
+        <p class="footer-contact-item"><strong>Email:</strong> stackly@gmail.com</p>
+        <p class="footer-contact-item"><strong>Location:</strong> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+        <div class="footer-social-icons">
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-left">Copyright &copy; 2026 Stackly &nbsp; All Rights Reserved</div>
+      <div class="footer-bottom-right">
+        <a href="404.html">Terms of service</a><span>&#183;</span>
+        <a href="404.html">Privacy policy</a><span>&#183;</span>
+        <a href="404.html">Subscription</a><span>&#183;</span>
+        <a href="login.html">Login &amp; Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // Mobile toggle
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Testimonial slider
+    let currentSlide = 0;
+    const cards = document.querySelectorAll('.testimonial-card');
+    function goToSlide(n) {
+      cards[currentSlide].classList.remove('active');
+      currentSlide = (n + cards.length) % cards.length;
+      cards[currentSlide].classList.add('active');
+    }
+    document.getElementById('testimonialPrev').addEventListener('click', () => goToSlide(currentSlide - 1));
+    document.getElementById('testimonialNext').addEventListener('click', () => goToSlide(currentSlide + 1));
+    setInterval(() => goToSlide(currentSlide + 1), 5000);
+
+    // Auth update
+    if (typeof authIsLoggedIn === 'function' && authIsLoggedIn()) {
+      const authEl = document.getElementById('topbar-auth');
+      if (authEl) authEl.innerHTML = `<a href="dashboard.html" style="color:var(--yellow);">Dashboard</a> | <a href="login.html" onclick="authLogout()">Logout</a>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Stackly Online Education</title>
+  <meta name="description" content="Contact Stackly for any inquiries or support." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <div class="topbar-item yellow">
+          <i class="fa-solid fa-phone fa-sm"></i>
+          <span style="color:var(--topbar-text)">(705) 569-0123</span>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item yellow">
+          <i class="fa-regular fa-envelope fa-sm"></i>
+          <span style="color:var(--topbar-text)">info@intogmail.com</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item" id="topbar-auth">
+          <a href="login.html">Login</a> / <a href="signup.html">Register</a>
+        </div>
+        <div class="topbar-divider"></div>
+        <span>Follow On:</span>
+        <div class="topbar-social">
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN HEADER ===== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-stackly.webp" alt="Stackly Logo" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="about.html">About Us <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="courses-public.html">Courses <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="contact.html" class="nav-active">Contact <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="categories-btn" onclick="window.location.href=\'404.html\'">
+          <i class="fa-solid fa-border-all"></i> Categories <i class="fa-solid fa-angle-down fa-xs"></i>
+        </button>
+        <div class="header-search">
+          <input type="text" placeholder="Search Course.." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="cart-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-badge">02</span>
+        </div>
+        <a href="signup.html" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses-public.html">Courses</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="signup.html" class="btn-primary" style="text-align:center; justify-content:center;">Apply Now</a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-hero-banner">
+    <div class="page-hero-dots-tl"></div>
+    <div class="page-hero-stripes-tr"></div>
+    <div class="container page-hero-inner">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Contact us<span class="page-hero-underline"></span></h1>
+        <br/><br/>
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-arrow-right fa-xs"></i>
+          <span>Contact us</span>
+        </div>
+      </div>
+      <div class="page-hero-image-wrap">
+        <img src="images/contact.webp" alt="Contact Us UI" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section">
+    <div class="container contact-layout">
+      
+      <!-- Left Info Column -->
+      <div class="contact-info-col">
+        <h2>I will Answer all Your<br/>Questions</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        
+        <h3 class="contact-info-heading">Contact Info</h3>
+        <div class="contact-details-list">
+          <div class="contact-detail-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-text">
+              MMR Complex, Chinna Thirupathi,<br/>
+              near Chinna Muniyappan Kovil,<br/>
+              Salem, Tamil Nadu 636008
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-text">
+              +1 (305) 902-3242
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div class="contact-text">
+              Stackly@gmail.com
+            </div>
+          </div>
+        </div>
+
+        <h3 class="social-heading">Social Media</h3>
+        <div class="contact-social">
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Form Column -->
+      <div class="contact-form-col">
+        <div class="contact-form-card">
+          <h3>Submit Your Query</h3>
+          <form class="contact-form" id="contactQueryForm">
+            <div class="form-row">
+              <div class="form-col">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Name" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed, no numbers." />
+              </div>
+              <div class="form-col">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-col">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone" required pattern="\d{10}" maxlength="10" title="Please enter exactly 10 digits." />
+              </div>
+              <div class="form-col">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Subject</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Course Support">Course Support</option>
+                  <option value="Billing">Billing</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-send">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+            <div id="formSuccess" style="display:none; color:#1ea383; font-size:0.9rem; margin-top:10px; font-weight:500;">
+              Your query has been sent successfully! We will get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== GLOBAL FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></div>
+        <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+        <a href="contact.html" class="footer-contact-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses-public.html">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="signup.html">Become Teacher</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Instructor</a></li>
+          <li><a href="about.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Get Contact</h4>
+        <p class="footer-contact-item"><strong>Phone:</strong> (+91) 123-456-789</p>
+        <p class="footer-contact-item"><strong>Email:</strong> stackly@gmail.com</p>
+        <p class="footer-contact-item"><strong>Location:</strong> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+        <div class="footer-social-icons">
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-left">Copyright &copy; 2026 Stackly &nbsp; All Rights Reserved</div>
+      <div class="footer-bottom-right">
+        <a href="404.html">Terms of service</a><span>&#183;</span>
+        <a href="404.html">Privacy policy</a><span>&#183;</span>
+        <a href="404.html">Subscription</a><span>&#183;</span>
+        <a href="login.html">Login &amp; Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // Mobile toggle
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Form Validations and Submission
+    const nameInput = document.getElementById('firstName');
+    const phoneInput = document.getElementById('phone');
+    const form = document.getElementById('contactQueryForm');
+    const successMsg = document.getElementById('formSuccess');
+
+    // Prevent integers in Name field in real-time
+    nameInput.addEventListener('input', function() {
+      this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+    });
+
+    // Prevent non-digits in Phone field in real-time
+    phoneInput.addEventListener('input', function() {
+      this.value = this.value.replace(/\D/g, '');
+    });
+
+    // Handle form submit
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Basic check
+      if(nameInput.value.trim() === '' || phoneInput.value.length < 10) {
+        return; // Will be caught by HTML5 required/pattern anyway, but just in case.
+      }
+
+      // Show success message
+      successMsg.style.display = 'block';
+      
+      // Clear form details
+      form.reset();
+
+      // Hide success message after 4 seconds
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 4000);
+    });
+
+    // Auth update
+    if (typeof authIsLoggedIn === 'function' && authIsLoggedIn()) {
+      const authEl = document.getElementById('topbar-auth');
+      if (authEl) authEl.innerHTML = `<a href="dashboard.html" style="color:var(--yellow);">Dashboard</a> | <a href="login.html" onclick="authLogout()">Logout</a>`;
+    }
+  </script>
+</body>
+</html>

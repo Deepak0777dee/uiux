@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses List - Stackly Online Education</title>
+  <meta name="description" content="Browse our wide selection of courses. Filter by category, price, and rating." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/courses.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <div class="topbar-item yellow">
+          <i class="fa-solid fa-phone fa-sm"></i>
+          <span style="color:var(--topbar-text)">(705) 569-0123</span>
+        </div>
+        <div class="topbar-divider"></div>
+        <div class="topbar-item yellow">
+          <i class="fa-regular fa-envelope fa-sm"></i>
+          <span style="color:var(--topbar-text)">info@intogmail.com</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item" id="topbar-auth">
+          <a href="login.html">Login</a> / <a href="signup.html">Register</a>
+        </div>
+        <div class="topbar-divider"></div>
+        <span>Follow On:</span>
+        <div class="topbar-social">
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN HEADER ===== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo-stackly.webp" alt="Stackly Logo" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="about.html">About Us <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="courses-public.html" class="nav-active">Courses <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+        <li><a href="contact.html">Contact <i class="fa-solid fa-angle-down fa-xs"></i></a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="categories-btn" onclick="window.location.href=\'404.html\'">
+          <i class="fa-solid fa-border-all"></i> Categories <i class="fa-solid fa-angle-down fa-xs"></i>
+        </button>
+        <div class="header-search">
+          <input type="text" placeholder="Search Course.." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="cart-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-badge">02</span>
+        </div>
+        <a href="signup.html" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses-public.html">Courses</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="signup.html" class="btn-primary" style="text-align:center; justify-content:center;">Apply Now</a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-hero-banner">
+    <div class="page-hero-dots-tl"></div>
+    <div class="page-hero-stripes-tr"></div>
+    <div class="container page-hero-inner">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Courses List<span class="page-hero-underline"></span></h1>
+        <br/><br/>
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-arrow-right fa-xs"></i>
+          <span>Courses List</span>
+        </div>
+      </div>
+      <div class="page-hero-image-wrap">
+        <img src="images/coursesheroimage.webp" alt="Students learning" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="filter-bar-section">
+    <div class="container filter-bar-inner">
+      <div class="view-toggles">
+        <button class="view-btn active"><i class="fa-solid fa-bars"></i> List</button>
+        <button class="view-btn"><i class="fa-solid fa-border-all"></i> Grid</button>
+      </div>
+      <div class="results-count">
+        We Found <strong>25</strong> Courses Available For you
+      </div>
+      <div class="filter-actions">
+        <div class="search-mini">
+          <input type="text" placeholder="Search Keywords" />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <button class="btn-filter" onclick="window.location.href=\'404.html\'"><i class="fa-solid fa-sliders"></i> Filter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <section class="container courses-layout">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="courses-sidebar">
+      
+      <!-- Search -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Search Here</h3>
+        <div class="search-form">
+          <input type="text" placeholder="Search Keywords" />
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Category</h3>
+        <div class="category-list">
+          <a href="404.html" class="category-item"><span>Business</span><span>06</span></a>
+          <a href="404.html" class="category-item active"><span>Education</span><span>07</span></a>
+          <a href="404.html" class="category-item"><span>Family & Divorce</span><span>09</span></a>
+          <a href="404.html" class="category-item"><span>Online Marketing</span><span>06</span></a>
+          <a href="404.html" class="category-item"><span>Islamic</span><span>05</span></a>
+          <a href="404.html" class="category-item"><span>Quran</span><span>08</span></a>
+          <a href="404.html" class="category-item"><span>Resturent</span><span>06</span></a>
+          <a href="404.html" class="category-item"><span>Web Design</span><span>05</span></a>
+        </div>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Price Filter</h3>
+        <div class="price-slider-wrap">
+          <div class="price-slider">
+            <div class="price-slider-fill" style="left:0%; right:0%;"></div>
+            <div class="price-slider-handle left" style="left:0%;"></div>
+            <div class="price-slider-handle right" style="right:0%;"></div>
+          </div>
+          <div class="price-actions">
+            <button class="btn-price-filter" onclick="window.location.href=\'404.html\'">Filter</button>
+            <span class="price-range-text">$0 - $500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sold Checkboxes -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Sold</h3>
+        <div class="checkbox-list">
+          <label class="checkbox-item"><input type="checkbox" /> On sale</label>
+          <label class="checkbox-item"><input type="checkbox" /> In Stock</label>
+        </div>
+      </div>
+
+      <!-- Average Rating -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Average Rating</h3>
+        <div class="rating-list">
+          <div class="rating-item">
+            <span class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </span>
+            <span>(05)</span>
+          </div>
+          <div class="rating-item">
+            <span class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star empty"></i>
+            </span>
+            <span>(04)</span>
+          </div>
+          <div class="rating-item">
+            <span class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star empty"></i><i class="fa-regular fa-star empty"></i>
+            </span>
+            <span>(03)</span>
+          </div>
+          <div class="rating-item">
+            <span class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star empty"></i><i class="fa-regular fa-star empty"></i><i class="fa-regular fa-star empty"></i>
+            </span>
+            <span>(02)</span>
+          </div>
+          <div class="rating-item">
+            <span class="rating-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-regular fa-star empty"></i><i class="fa-regular fa-star empty"></i><i class="fa-regular fa-star empty"></i><i class="fa-regular fa-star empty"></i>
+            </span>
+            <span>(01)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Products -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Recent Products</h3>
+        <div class="recent-products-list">
+          <div class="recent-product-item">
+            <div class="recent-product-img"><img src="images/courselist7.webp" alt="Product" /></div>
+            <div class="recent-product-info">
+              <h4>Powerstroke Engines Turbo Air Products</h4>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="recent-product-item">
+            <div class="recent-product-img"><img src="images/courselist8.webp" alt="Product" /></div>
+            <div class="recent-product-info">
+              <h4>Powerstroke Engines Turbo Air Products</h4>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="recent-product-item">
+            <div class="recent-product-img"><img src="images/courselist9.webp" alt="Product" /></div>
+            <div class="recent-product-info">
+              <h4>Powerstroke Engines Turbo Air Products</h4>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="recent-product-item">
+            <div class="recent-product-img"><img src="images/courselist10.webp" alt="Product" /></div>
+            <div class="recent-product-info">
+              <h4>Powerstroke Engines Turbo Air Products</h4>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popular Tags -->
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">Popular Tags</h3>
+        <div class="tags-list">
+          <a href="404.html" class="tag-item">Business</a>
+          <a href="404.html" class="tag-item">Education</a>
+          <a href="404.html" class="tag-item">Students</a>
+          <a href="404.html" class="tag-item">Art</a>
+          <a href="404.html" class="tag-item">Modern</a>
+          <a href="404.html" class="tag-item">School</a>
+          <a href="404.html" class="tag-item">Tech</a>
+          <a href="404.html" class="tag-item">Development</a>
+          <a href="404.html" class="tag-item">UI UX Design</a>
+          <a href="404.html" class="tag-item">Market</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT COURSE LIST -->
+    <div class="courses-main">
+      <div class="course-list-wrap">
+        
+        <!-- Card 1 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist1.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Grow Personal Financial Security Thinking</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist2.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Learn Figma & Adobe XD for UI/UX Design</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist3.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Figma UI Design Bootcamp Build Stunning Interfaces</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist4.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Master Figma from Scratch UI Design Essentials</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist5.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Webflow Masterclass - Build Modern Websites Without Code</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist6.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Advanced Figma Design Techniques for Professionals</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist7.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">UI/UX Design for Beginners – From Idea to Prototype</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist8.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Adobe Creative Suite Complete Design Guide</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist9.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Figma for Web & App Designers – Practical Projects</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="course-list-card">
+          <div class="course-card-img"><img src="images/courselist10.webp" alt="Course" /></div>
+          <div class="course-card-content">
+            <button class="course-bookmark"><i class="fa-regular fa-bookmark"></i></button>
+            <div class="course-card-header">
+              <span class="course-tag">Design</span>
+              <span class="course-price">$20.00</span>
+              <span class="course-price-sale">$9.00</span>
+            </div>
+            <h2 class="course-title">Adobe XD & Figma Masterclass – Design Real Projects</h2>
+            <p class="course-desc">Its done really well. Perect for my brain in the way it learns. Lectures are great and the coure really gives as much if not all things you need</p>
+            <div class="course-meta">
+              <span><i class="fa-solid fa-book-open"></i> 20 Lessons</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-user"></i> 50 Students</span>
+              <div class="course-meta-divider"></div>
+              <span><i class="fa-regular fa-clock"></i> 6 months</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="blog-pagination">
+        <a href="404.html" class="page-num"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="404.html" class="page-num">1</a>
+        <a href="404.html" class="page-num active">2</a>
+        <a href="404.html" class="page-num">3</a>
+        <a href="404.html" class="page-num">4</a>
+        <a href="404.html" class="page-num"><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER BANNER ===== -->
+  <div class="container">
+    <div class="newsletter-banner">
+      <div class="newsletter-text">
+        <h2>Sign Up today to get the<br/>latest inspiration &amp; insights</h2>
+      </div>
+      <form class="newsletter-form">
+        <div class="newsletter-form-inner">
+          <input type="email" placeholder="Enter Your Email Address" required />
+          <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== GLOBAL FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></div>
+        <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+        <a href="contact.html" class="footer-contact-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses-public.html">Courses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="signup.html">Become Teacher</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Instructor</a></li>
+          <li><a href="about.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-col">
+        <h4>Get Contact</h4>
+        <p class="footer-contact-item"><strong>Phone:</strong> (+91) 123-456-789</p>
+        <p class="footer-contact-item"><strong>Email:</strong> stackly@gmail.com</p>
+        <p class="footer-contact-item"><strong>Location:</strong> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+        <div class="footer-social-icons">
+          <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-left">Copyright &copy; 2026 Stackly &nbsp; All Rights Reserved</div>
+      <div class="footer-bottom-right">
+        <a href="404.html">Terms of service</a><span>&#183;</span>
+        <a href="404.html">Privacy policy</a><span>&#183;</span>
+        <a href="404.html">Subscription</a><span>&#183;</span>
+        <a href="login.html">Login &amp; Register</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // Mobile toggle
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Auth update
+    if (typeof authIsLoggedIn === 'function' && authIsLoggedIn()) {
+      const authEl = document.getElementById('topbar-auth');
+      if (authEl) authEl.innerHTML = `<a href="dashboard.html" style="color:var(--yellow);">Dashboard</a> | <a href="login.html" onclick="authLogout()">Logout</a>`;
+    }
+  </script>
+</body>
+</html>
