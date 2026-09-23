@@ -354,24 +354,33 @@ ul {
 }
 
 @media (max-width: 860px) {
-  /* Compact topbar — single row, no wrapping */
-  .topbar {
-    display: block;
-    padding: 0.3rem 0;
+  /* The new wrapper keeps both bars stacked perfectly */
+  .header-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 1001;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  }
+
+  /* Compact topbar — single row, keep it visible! */
+  .topbar {
+    display: block;
+    padding: 0.3rem 0;
+    /* Static positioning inside wrapper */
+    position: relative;
+    z-index: 2;
   }
   .topbar .container {
-    flex-wrap: nowrap;   /* NEVER wrap to second line */
+    flex-wrap: nowrap;
     gap: 0.5rem;
     overflow: hidden;
   }
   .topbar-left {
-    display: none;       /* hide phone/email */
+    display: none;
   }
   .topbar-right {
     width: 100%;
@@ -380,7 +389,6 @@ ul {
     gap: 0.5rem;
     min-width: 0;
   }
-  /* Hide "Follow On:" label text — keep only the icons */
   .topbar-right > span {
     display: none;
   }
@@ -395,16 +403,35 @@ ul {
     display: block;
   }
 
-  /* Initial fallback — JS will override precisely after measuring */
+  /* Header flows naturally below topbar inside wrapper */
   .main-header {
+    position: relative;
+    z-index: 1;
+    border-bottom: none;
+  }
+  /* Remove scroll shadow from main-header since wrapper has it */
+  .main-header.scrolled {
+    box-shadow: none;
+  }
+
+  /* Push body below header wrapper */
+  body {
+    padding-top: 110px; /* ~38px topbar + 72px header */
+  }
+
+  /* Mobile nav dropdown */
+  .mobile-nav {
     position: fixed;
+    top: 110px;
     left: 0;
     right: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    background: #fff;
+    max-height: calc(100vh - 110px);
   }
 }
+
 
 
 

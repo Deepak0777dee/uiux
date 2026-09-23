@@ -29,36 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ============================================
-  // DYNAMIC MOBILE HEADER POSITIONING
-  // Measures the real topbar height after render
-  // so there is zero gap between topbar and header
-  // ============================================
-  function fixMobileHeader() {
-    if (window.innerWidth > 860) return; // only on mobile
-
-    const topbar = document.querySelector('.topbar');
-    const header = document.getElementById('mainHeader');
-    const mobileNav = document.getElementById('mobileNav');
-
-    if (!topbar || !header) return;
-
-    const topbarH = topbar.getBoundingClientRect().height;
-    const headerH = header.getBoundingClientRect().height;
-    const totalH   = topbarH + headerH;
-
-    header.style.top          = topbarH + 'px';
-    document.body.style.paddingTop = totalH + 'px';
-
-    if (mobileNav) {
-      mobileNav.style.top       = totalH + 'px';
-      mobileNav.style.maxHeight = 'calc(100vh - ' + totalH + 'px)';
-    }
-  }
-
-  // Run on load and on resize (orientation change)
-  fixMobileHeader();
-  window.addEventListener('resize', fixMobileHeader);
-
+  // CSS now handles all header layout on mobile seamlessly using .header-wrapper
 });
-
