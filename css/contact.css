@@ -281,7 +281,8 @@
   border: none;
   cursor: pointer;
   transition: background 0.2s;
-  align-self: flex-start;
+  width: 100%;
+  justify-content: center;
   margin-top: 0.5rem;
 }
 .btn-send:hover {

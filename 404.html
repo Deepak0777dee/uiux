@@ -107,6 +107,13 @@
     }
     .shape-1 { top: 5%; left: 5%; width: 150px; height: 150px; background: #007654; border-radius: 50%; filter: blur(50px); }
     .shape-2 { bottom: 10%; right: 5%; width: 200px; height: 200px; background: #007654; border-radius: 50%; filter: blur(80px); }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      .illustration { max-width: 100% !important; height: auto; }
+      p.desc { font-size: 14px; }
+      .bottom-link { flex-direction: column; text-align: center; }
+    }
   </style>
 </head>
 <body>

@@ -618,12 +618,14 @@
 }
 .newsletter-form-inner {
   display: flex;
+  flex-wrap: nowrap;
   background: #fff;
   border-radius: 8px;
   padding: 0.5rem;
 }
 .newsletter-form input {
   flex: 1;
+  min-width: 0;
   border: none;
   padding: 0.8rem 1.25rem;
   font-size: 0.95rem;
@@ -656,11 +658,60 @@
   .newsletter-banner { flex-direction: column; text-align: center; padding: 3rem 2rem; }
   .newsletter-form { width: 100%; max-width: 100%; }
 }
+
 @media (max-width: 768px) {
-  .page-hero-inner { flex-direction: column; }
-  .page-hero-image-wrap { width: 100%; }
-  .filter-bar-inner { flex-direction: column; align-items: stretch; }
-  .filter-actions { justify-content: space-between; width: 100%; }
-  .search-mini { flex: 1; }
+  .page-hero-banner { padding: 2.5rem 0; }
+  .page-hero-inner { flex-direction: column; gap: 1.5rem; }
+  .page-hero-image-wrap { width: 100%; height: 200px; }
+  .page-hero-title { font-size: 1.8rem; }
+
+  .filter-bar-section { padding: 1rem 0; }
+  .filter-bar-inner { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .filter-actions { justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 0.75rem; }
+  .search-mini { flex: 1; min-width: 0; }
   .search-mini input { width: 100%; }
+  .view-toggles { width: 100%; justify-content: center; }
+
+  .courses-layout { padding: 0 0 3rem; }
+  .courses-sidebar { width: 100%; }
+  .sidebar-widget { padding: 1rem; }
+  .category-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+
+  .course-list-card { flex-direction: column; }
+  .course-card-img { width: 100%; height: 180px; }
+  .course-card-content { padding: 0.75rem 0 0; }
+  .course-meta { flex-wrap: wrap; gap: 0.75rem; }
+  .course-meta-divider { display: none; }
+
+  .newsletter-banner { padding: 2rem 1.25rem; gap: 1.5rem; }
+  .newsletter-text h2 { font-size: 1.5rem; }
+  .newsletter-form { max-width: 100%; }
+
+  .recent-products-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .page-hero-banner { padding: 2rem 0; }
+  .page-hero-title { font-size: 1.5rem; }
+
+  .filter-actions { flex-direction: column; }
+  .search-mini { width: 100%; }
+  .btn-filter { width: 100%; justify-content: center; }
+
+  .category-list { grid-template-columns: 1fr; }
+  .tags-list { gap: 0.4rem; }
+
+  .course-list-card { padding: 0.75rem; }
+  .course-title { font-size: 1rem; }
+  .course-card-img { height: 150px; }
+
+  .newsletter-banner { padding: 1.5rem 1rem; }
+  .newsletter-form-inner { flex-wrap: wrap; gap: 0.5rem; }
+  .newsletter-form input { width: 100%; border-radius: 6px; }
+  .newsletter-btn { width: 100%; height: 42px; border-radius: 6px; }
+
+  .recent-products-list { grid-template-columns: 1fr; }
+
+  .blog-pagination { gap: 0.25rem; }
+  .page-num { width: 34px; height: 34px; font-size: 0.85rem; }
 }

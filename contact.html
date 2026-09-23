@@ -10,6 +10,105 @@
   <link rel="stylesheet" href="css/contact.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ===== GOOGLE MAPS SECTION ===== */
+    .map-section {
+      padding: 4rem 0;
+      background: #f7f9f8;
+    }
+    .map-section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .map-section-header .section-tag {
+      display: inline-block;
+      background: rgba(13,74,58,0.08);
+      color: #0d4a3a;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+    }
+    .map-section-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+    .map-section-header p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+    .map-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 1px solid #e8e8e8;
+    }
+    /* Responsive 16:5 aspect ratio for the map */
+    .map-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 420px;
+      border: none;
+    }
+    .map-info-bar {
+      background: #fff;
+      border-top: 1px solid #eee;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .map-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: #555;
+    }
+    .map-info-item i {
+      color: #0d4a3a;
+      font-size: 1rem;
+      width: 18px;
+      text-align: center;
+    }
+    .map-info-item strong {
+      color: #222;
+    }
+    .map-directions-btn {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #0d4a3a;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .map-directions-btn:hover { background: #083025; color: #fff; }
+    @media (max-width: 768px) {
+      .map-section { padding: 2.5rem 0; }
+      .map-wrapper iframe { height: 280px; }
+      .map-info-bar { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1rem; }
+      .map-directions-btn { margin-left: 0; width: 100%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .map-wrapper iframe { height: 220px; }
+      .map-section-header h2 { font-size: 1.4rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -64,7 +163,7 @@
           <input type="text" placeholder="Search Course.." />
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <div class="cart-icon">
+        <div class="cart-icon" onclick="window.location.href='404.html'" style="cursor: pointer;">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
           <span class="cart-badge">02</span>
         </div>
@@ -198,11 +297,53 @@
     </div>
   </section>
 
+  <!-- ===== GOOGLE MAP SECTION ===== -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-section-header">
+        <span class="section-tag">Our Location</span>
+        <h2>Find Us on the Map</h2>
+        <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://maps.google.com/maps?q=Chinna+Thirupathi+Salem+Tamil+Nadu+636008&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Stackly Office Location - Salem, Tamil Nadu"
+        ></iframe>
+        <div class="map-info-bar">
+          <div class="map-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><strong>Address:</strong> MMR Complex, Chinna Thirupathi, Salem, TN 636008</div>
+          </div>
+          <div class="map-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><strong>Phone:</strong> +1 (305) 902-3242</div>
+          </div>
+          <div class="map-info-item">
+            <i class="fa-regular fa-clock"></i>
+            <div><strong>Hours:</strong> Mon–Fri, 9am – 6pm IST</div>
+          </div>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Chinna+Thirupathi,+Salem,+Tamil+Nadu+636008"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-directions-btn"
+          >
+            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== GLOBAL FOOTER ===== -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand-col">
-        <div class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></div>
+        <a href="index.html" class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></a>
         <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
         <a href="contact.html" class="footer-contact-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
       </div>

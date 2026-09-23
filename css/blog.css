@@ -422,12 +422,14 @@
 }
 .newsletter-form-inner {
   display: flex;
+  flex-wrap: nowrap;
   background: #fff;
   border-radius: 8px;
   padding: 0.5rem;
 }
 .newsletter-form input {
   flex: 1;
+  min-width: 0;
   border: none;
   padding: 0.8rem 1.25rem;
   font-size: 0.95rem;

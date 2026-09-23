@@ -62,9 +62,9 @@
         </button>
         <div class="header-search">
           <input type="text" placeholder="Search Course.." />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass" onclick="window.location.href='404.html'" style="cursor:pointer;"></i>
         </div>
-        <div class="cart-icon">
+        <div class="cart-icon" onclick="window.location.href='404.html'" style="cursor: pointer;">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
           <span class="cart-badge">02</span>
         </div>
@@ -108,6 +108,21 @@
       <!-- LEFT MAIN CONTENT -->
       <div class="blog-main">
         
+        <!-- New Post from Figma -->
+        <article class="blog-post-card">
+          <img src="images/blog1.webp" alt="App UI Design" class="blog-post-img" />
+          <div class="blog-post-meta">
+            <span><i class="fa-regular fa-calendar"></i> December 24, 2025</span>
+            <span><i class="fa-regular fa-comments"></i> Comments</span>
+            <span><i class="fa-regular fa-user"></i> Jennifer Hale</span>
+          </div>
+          <h2 class="blog-post-title">(705) 569-0123</h2>
+          <p class="blog-post-desc">
+            What does it take to deliver an amazing user experience (UX)? A seamless design process, of course. The UX design process is a cycle that leads to the creation of products that align with users' needs to create a more satisfying, intuitive experience. It entails:
+          </p>
+          <a href="404.html" class="btn-see-articles">See Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
         <!-- Post 1 -->
         <article class="blog-post-card">
           <img src="images/blog1.webp" alt="Blog Post Image" class="blog-post-img" />
@@ -171,7 +186,7 @@
           <h3 class="sidebar-title">Search Here</h3>
           <div class="search-form">
             <input type="text" placeholder="Search Keywords" />
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="button" onclick="window.location.href='404.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
         </div>
 
@@ -267,7 +282,7 @@
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-brand-col">
-        <div class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></div>
+        <a href="index.html" class="footer-logo"><img src="images/logo-stackly.webp" alt="Stackly" /></a>
         <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
         <a href="contact.html" class="footer-contact-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
       </div>

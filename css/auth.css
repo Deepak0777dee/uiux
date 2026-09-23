@@ -113,6 +113,9 @@ body {
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
+.form-group input[type="password"] {
+  padding-right: 2.5rem;
+}
 .form-group input::placeholder {
   color: #aaa;
 }

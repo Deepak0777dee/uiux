@@ -58,13 +58,19 @@
   z-index: 2;
 }
 
-.page-hero-content { flex: 1; }
+.page-hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
 
 .page-hero-title {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 800;
   color: #1a1a1a;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   position: relative;
   display: inline-block;
 }

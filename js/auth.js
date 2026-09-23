@@ -105,6 +105,7 @@ function authApplyRBAC() {
   setTextById('sb-role', user.role.toUpperCase());
   setTextById('sb-email', user.email);
   setTextById('topbar-name', user.name);
+  setTextById('topbar-email', user.email);
 }
 
 /* Toast Notification */
