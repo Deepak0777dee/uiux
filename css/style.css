@@ -354,29 +354,60 @@ ul {
 }
 
 @media (max-width: 860px) {
+  /* Compact topbar — single row, no wrapping */
   .topbar {
-    display: none;
-  }
-  .nav-menu, .header-search, .categories-btn, .header-actions .btn-primary {
-    display: none; 
-  }
-  .mobile-menu-toggle {
     display: block;
-  }
-  /* Switch to fixed on mobile — position:sticky breaks when any ancestor
-     section has overflow:hidden (which most sections do for decorative elements) */
-  .main-header {
+    padding: 0.3rem 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 1001;
   }
-  /* Push page content below the fixed header (~70px tall) */
-  body {
-    padding-top: 70px;
+  .topbar .container {
+    flex-wrap: nowrap;   /* NEVER wrap to second line */
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+  .topbar-left {
+    display: none;       /* hide phone/email */
+  }
+  .topbar-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  /* Hide "Follow On:" label text — keep only the icons */
+  .topbar-right > span {
+    display: none;
+  }
+  .topbar-divider {
+    display: none;
+  }
+
+  .nav-menu, .header-search, .categories-btn, .header-actions .btn-primary {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Initial fallback — JS will override precisely after measuring */
+  .main-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
   }
 }
+
+
+
 
 
 /* ============================================

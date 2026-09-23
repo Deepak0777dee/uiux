@@ -4,24 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Mobile Menu Toggle
-  const mobileToggle = document.querySelector('.mobile-menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-      navMenu.style.flexDirection = 'column';
-      navMenu.style.position = 'absolute';
-      navMenu.style.top = '100%';
-      navMenu.style.left = '0';
-      navMenu.style.right = '0';
-      navMenu.style.background = '#fff';
-      navMenu.style.padding = '1rem';
-      navMenu.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
-      navMenu.style.zIndex = '999';
-    });
-  }
 
   // Update Auth Links in Header based on session
   if (typeof authIsLoggedIn === 'function') {
@@ -47,4 +29,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ============================================
+  // DYNAMIC MOBILE HEADER POSITIONING
+  // Measures the real topbar height after render
+  // so there is zero gap between topbar and header
+  // ============================================
+  function fixMobileHeader() {
+    if (window.innerWidth > 860) return; // only on mobile
+
+    const topbar = document.querySelector('.topbar');
+    const header = document.getElementById('mainHeader');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (!topbar || !header) return;
+
+    const topbarH = topbar.getBoundingClientRect().height;
+    const headerH = header.getBoundingClientRect().height;
+    const totalH   = topbarH + headerH;
+
+    header.style.top          = topbarH + 'px';
+    document.body.style.paddingTop = totalH + 'px';
+
+    if (mobileNav) {
+      mobileNav.style.top       = totalH + 'px';
+      mobileNav.style.maxHeight = 'calc(100vh - ' + totalH + 'px)';
+    }
+  }
+
+  // Run on load and on resize (orientation change)
+  fixMobileHeader();
+  window.addEventListener('resize', fixMobileHeader);
+
 });
+

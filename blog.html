@@ -267,9 +267,9 @@
       <div class="newsletter-text">
         <h2>Sign Up today to get the<br/>latest inspiration &amp; insights</h2>
       </div>
-      <form class="newsletter-form">
+      <form class="newsletter-form" id="newsletterForm">
         <div class="newsletter-form-inner">
-          <input type="email" placeholder="Enter Your Email Address" required />
+          <input type="email" id="newsletterEmail" placeholder="Enter Your Email Address" required />
           <button type="submit" class="newsletter-btn" aria-label="Subscribe">
             <i class="fa-regular fa-paper-plane"></i>
           </button>
@@ -333,6 +333,7 @@
   <div id="toast-container"></div>
 
   <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
   <script>
     // Mobile toggle
     document.getElementById('mobileToggle').addEventListener('click', () => {
@@ -348,6 +349,21 @@
     if (typeof authIsLoggedIn === 'function' && authIsLoggedIn()) {
       const authEl = document.getElementById('topbar-auth');
       if (authEl) authEl.innerHTML = `<a href="dashboard.html" style="color:var(--yellow);">Dashboard</a> | <a href="login.html" onclick="authLogout()">Logout</a>`;
+    }
+
+    // Newsletter subscription
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = document.getElementById('newsletterEmail');
+        if (emailInput && emailInput.value) {
+          if (typeof showToast === 'function') {
+            showToast('Successfully subscribed! Welcome to Stackly.', 'success');
+          }
+          emailInput.value = '';
+        }
+      });
     }
   </script>
 </body>

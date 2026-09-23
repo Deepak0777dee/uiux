@@ -106,6 +106,11 @@ function authApplyRBAC() {
   setTextById('sb-email', user.email);
   setTextById('topbar-name', user.name);
   setTextById('topbar-email', user.email);
+
+  // Set avatar initials to first letter of email
+  const initial = user.email ? user.email.charAt(0).toUpperCase() : 'U';
+  setTextById('sbAvatar', initial);
+  setTextById('topbarAvatar', initial);
 }
 
 /* Toast Notification */
